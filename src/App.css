@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+.reset-pico-colors {
+  /* Text: let it inherit from parent (or user agent) */
+  --text: inherit;
+  /* Backgrounds: make transparent or inherit */
+  --background: transparent;
+  --background-content: transparent;
+  /* Accent (used for buttons/links): transparent or inherit */
+  --accent: transparent;
+  /* Muted, contrast, etc., set to inherit or transparent if used */
+  --muted: inherit;
+  --contrast: inherit;
+  /* Any other Pico color vars you find in Pico’s source: override similarly */
+}
