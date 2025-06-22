@@ -9,6 +9,12 @@ import {
   addSession,
 } from "../lib/storage";
 
+declare global {
+  interface Window {
+    webkitAudioContext?: typeof AudioContext;
+  }
+}
+
 function speak(text: string) {
   if (!("speechSynthesis" in window)) return;
   const utter = new SpeechSynthesisUtterance(text);
@@ -21,7 +27,7 @@ function speak(text: string) {
 
 function playToneSequence(sequence: { freq: number; duration: number }[]) {
   try {
-    const AudioCtx = window.AudioContext || (window as any).webkitAudioContext;
+    const AudioCtx = window.AudioContext || window.webkitAudioContext;
     const ctx = new AudioCtx();
     let currentTime = ctx.currentTime;
     sequence.forEach(({ freq, duration }) => {
@@ -74,6 +80,7 @@ function playBreakEndSound() {
  */
 function TimerPage() {
   // Pomodoro configurations
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const presets = [
     { label: "25/5", work: 25 * 60, rest: 5 * 60 },
     { label: "50/10", work: 50 * 60, rest: 10 * 60 },
@@ -165,7 +172,9 @@ function TimerPage() {
         if (unfinished) {
           try {
             addSession(unfinished.start, endISO);
-          } catch {}
+          } catch {
+            console.log("");
+          }
           clearUnfinishedSession();
         }
         // Start rest
@@ -210,7 +219,9 @@ function TimerPage() {
       if (unfinished) {
         try {
           addSession(unfinished.start, endISO);
-        } catch {}
+        } catch {
+          console.log("");
+        }
         clearUnfinishedSession();
       }
     }
@@ -228,7 +239,9 @@ function TimerPage() {
         if (unfinished) {
           try {
             addSession(unfinished.start, endISO);
-          } catch {}
+          } catch {
+            console.log("");
+          }
           clearUnfinishedSession();
         }
       }

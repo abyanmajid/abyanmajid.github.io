@@ -167,7 +167,7 @@ function TasksPage() {
     reload();
   };
 
-  const handleEdit = (id: string, _text: string) => {
+  const handleEdit = (id: string) => {
     setEditingId(id);
     setModalOpen(true);
   };
