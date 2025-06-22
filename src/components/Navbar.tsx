@@ -4,31 +4,18 @@ type NavItem = {
 };
 
 const navItems: NavItem[] = [
-  {
-    label: "Tasks",
-    href: "tasks",
-  },
-  {
-    label: "Timer",
-    href: "timer",
-  },
-  {
-    label: "Analytics",
-    href: "analytics",
-  },
-  {
-    label: "History",
-    href: "history",
-  },
-  {
-    label: "Settings",
-    href: "settings",
-  },
+  { label: "Tasks", href: "tasks" },
+  { label: "Timer", href: "timer" },
+  { label: "Analytics", href: "analytics" },
+  { label: "History", href: "history" },
+  { label: "Settings", href: "settings" },
 ];
 
 function Navbar() {
   return (
-    <nav className="px-12 bg-[#0E1118]">
+    // role="navigation" triggers Pico’s hamburger on small screens
+    <nav role="navigation" className="px-12 bg-[#0E1118]">
+      {/* Brand */}
       <ul>
         <li>
           <a className="text-xl contrast" href="/">
@@ -36,9 +23,10 @@ function Navbar() {
           </a>
         </li>
       </ul>
+      {/* Nav links */}
       <ul>
         {navItems.map((item) => (
-          <li>
+          <li key={item.href}>
             <a href={`/dash/${item.href}`} className="contrast">
               {item.label}
             </a>

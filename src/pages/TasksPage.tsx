@@ -15,6 +15,7 @@ import {
 } from "../lib/storage";
 import { ConfirmModal } from "../components/ConfirmModal";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 function AddTaskModal({
   open,
@@ -288,6 +289,7 @@ function TasksPage() {
           </div>
         )}
       </main>
+      <Footer />
     </>
   );
 }

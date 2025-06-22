@@ -1,4 +1,5 @@
 import Center from "../components/Center";
+import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
 function NotFoundPage() {
@@ -13,6 +14,7 @@ function NotFoundPage() {
           <button className="outline">Return to Home</button>
         </a>
       </Center>
+      <Footer />
     </>
   );
 }

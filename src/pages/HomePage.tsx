@@ -41,7 +41,7 @@ function HomePage() {
   return (
     <Center>
       <h1>✨ Lock In ✨</h1>
-      <p>Yan&apos;s simple, local tool to help you lock the fuck in.</p>
+      <p>Yan&apos;s simple, local tool to help you lock the fuck in 😭😔</p>
       <hr />
       <div className="space-x-2">
         {pageLinks.map((p) => (
