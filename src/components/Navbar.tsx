@@ -7,8 +7,6 @@ const navItems: NavItem[] = [
   { label: "Tasks", href: "tasks" },
   { label: "Timer", href: "timer" },
   { label: "Analytics", href: "analytics" },
-  { label: "History", href: "history" },
-  { label: "Settings", href: "settings" },
 ];
 
 function Navbar() {

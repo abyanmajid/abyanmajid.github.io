@@ -24,16 +24,8 @@ const pageLinks: IPageLink[] = [
     label: "Timer",
   },
   {
-    href: "/history",
-    label: "History",
-  },
-  {
     href: "/analytics",
     label: "Analytics",
-  },
-  {
-    href: "/settings",
-    label: "Settings",
   },
 ];
 
@@ -41,7 +33,7 @@ function HomePage() {
   return (
     <Center>
       <h1>✨ Lock In ✨</h1>
-      <p>Yan&apos;s simple, local tool to help you lock the fuck in 😭😔</p>
+      <p>Yan&apos;s simple, local tool to help you lock the fuck in ... TvT</p>
       <hr />
       <div className="space-x-2">
         {pageLinks.map((p) => (
