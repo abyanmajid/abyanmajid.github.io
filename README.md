@@ -1,7 +1,5 @@
-I author open-source packages such as [matcha](https://matcha.abydyl.net)
+currently obsessed with agentic workflows and decentralised applications.
 
-Interested in decentralised (blockchain) applications
-
----
-
-![ProfileViews](https://komarev.com/ghpvc/?username=abyanmajid&label=views&color=blueviolet) [![LinkedIn](https://img.shields.io/badge/abyanmajid-LinkedIn-blue)](https://www.linkedin.com/in/abyanmajid/) [![Gmail](https://img.shields.io/badge/am@abydyl.net-D14836?style=flat&logo=gmail&logoColor=white)](mailto:abyan@abydyl.net) [![Discord](https://img.shields.io/badge/offensiverealist-%235865F2.svg?style=flat&logo=discord&logoColor=white)](#)
+- email: <a href="mailto:abyan@abydyl.net">abyan@abydyl.net</a>
+- linkedin: https://www.linkedin.com/in/abyanmajid
+- discord: a3n.sh
