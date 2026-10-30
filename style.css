@@ -1,0 +1,114 @@
+@font-face {
+  font-family: Inter;
+  src: url('/fonts/inter.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Lora;
+  src: url('/fonts/lora-italic.woff2') format('woff2');
+  font-style: italic;
+  font-weight: 400 700;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: light;
+  background: #fcfcfc;
+  color: #4a515b;
+  font-family: Inter, sans-serif;
+  font-synthesis: none;
+  font-optical-sizing: auto;
+  font-feature-settings: 'cpsp' 1, 'cv01', 'cv03', 'cv04', 'calt', 'ss03', 'liga', 'ordn';
+  font-variation-settings: 'wght' 440, 'opsz' 32;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 24px;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.0085em;
+  word-spacing: -0.04em;
+}
+
+.layout { display: flex; flex-direction: column; max-width: 600px; margin-inline: auto; }
+
+nav {
+  margin-bottom: 24px;
+  text-align: right;
+  font-family: Lora, Georgia, serif;
+  font-style: italic;
+  font-variation-settings: 'wght' 480;
+  letter-spacing: -0.006em;
+}
+
+nav a {
+  display: inline-block;
+  margin-inline: -8px;
+  padding-inline: 8px;
+  color: #1e2125;
+  text-decoration: none;
+}
+
+main {
+  flex: 1;
+  min-width: 0;
+  max-width: 600px;
+  hyphens: auto;
+  hyphenate-limit-chars: 10 6 6;
+}
+
+h1 {
+  margin: 0 0 24px;
+  color: #3b4149;
+  font: inherit;
+  font-variation-settings: 'wght' 600, 'opsz' 32;
+}
+
+p { margin: 24px 0 0; }
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+main a {
+  color: inherit;
+  text-decoration-color: #b3b9c1;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color 150ms, text-decoration-color 150ms;
+}
+
+a:hover { color: #1e2125; text-decoration-color: currentColor; }
+a:focus-visible { outline: 1px dotted #697381; outline-offset: 4px; border-radius: 2px; }
+::selection { background: #d8dbdf; color: #1e2125; }
+
+@media (min-width: 420px) {
+  .layout { flex-direction: row; }
+  nav { flex: 0 0 64px; margin: 0 24px 0 0; }
+}
+
+@media (min-width: 640px) {
+  body { padding: 40px; font-size: 15px; line-height: 28px; }
+  nav { margin-right: 40px; }
+  h1 { margin-bottom: 28px; }
+  p { margin-top: 28px; }
+}
+
+@media (min-width: 768px) {
+  body { padding: 56px; font-size: 16px; }
+  nav { margin-right: 56px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  main a { transition: none; }
+}

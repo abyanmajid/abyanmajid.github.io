@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://abyanmajid.github.io/sitemap.xml
+Sitemap: https://a3n.sh/sitemap.xml
